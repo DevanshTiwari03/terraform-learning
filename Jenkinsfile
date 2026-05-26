@@ -27,6 +27,7 @@ pipeline{
                 sh 'tfsec .'
             }
         }
+        
 
         stage('Terraform Plan'){
             steps{
