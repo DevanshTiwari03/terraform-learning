@@ -12,6 +12,8 @@ resource "google_compute_health_check" "frontend_hc" {
 
     request_path = "/"
   }
+
+  
 }
 
 resource "google_compute_backend_service" "frontend_backend" {
