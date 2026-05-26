@@ -27,7 +27,7 @@ pipeline{
                 sh 'tfsec .'
             }
         }
-        
+         
         stage('Terraform Plan'){
             steps{
                 sh 'terraform plan'
