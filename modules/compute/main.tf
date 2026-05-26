@@ -1,8 +1,8 @@
 resource "google_compute_instance" "frontend" {
-  for_each = var.frontend_servers
-  name="${terraform.workspace}-${each.key}"
+  for_each     = var.frontend_servers
+  name         = "${terraform.workspace}-${each.key}"
   machine_type = each.value
-  zone = var.zone
+  zone         = var.zone
 
   boot_disk {
     initialize_params {
@@ -14,7 +14,7 @@ resource "google_compute_instance" "frontend" {
     access_config {}
   }
 
-  metadata_startup_script=<<-EOF
+  metadata_startup_script = <<-EOF
 #!/bin/bash
 
 sleep 30
@@ -31,7 +31,7 @@ echo "<h1>${each.key}</h1>" >/var/www/html/index.html
 
 EOF
 
- tags=["web"]
+  tags = ["web"]
 }
 
 

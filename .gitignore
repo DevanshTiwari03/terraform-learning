@@ -1,66 +1,30 @@
-# Terraform local state
-
+# Terraform state
 *.tfstate
 *.tfstate.*
 
 # Terraform cache
-
 .terraform/
 
-# Terraform plan files
-
+# Plan files
 *.tfplan
 
-# Sensitive variable files
-
-*.auto.tfvars
-
 # Crash logs
-
 crash.log
 
-# Terraform override files
-
-override.tf
-override.tf.json
-*_override.tf
-*_override.tf.json
+# Sensitive variables
+*.auto.tfvars
 
 # IDE
-
 .vscode/
 .idea/
 
 # OS
-
 .DS_Store
 Thumbs.db
 
-# Service account keys
+# Secrets
+*.json
+*.pem
 
-*.json.terraform/
-# Terraform files
-.terraform/
-*.tfstate
-*.tfstate.*
-crash.log
-
-# Variable secrets
-*.tfvars
-*.tfvars.json
-
-# Override files
-override.tf
-override.tf.json
-*_override.tf
-*_override.tf.json
-
-# Terraform lock file (optional)
-.terraform.lock.hcl
-
-# IDE
-.vscode/
-
-# OS
-.DS_Store
-Thumbs.db
+# Logs
+*.log
