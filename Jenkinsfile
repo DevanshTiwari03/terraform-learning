@@ -39,7 +39,6 @@ pipeline{
                 input 'Deploy infrastructure?'
             }
         }
-        
         stage('Terraform Apply'){
             steps{
                 sh 'terraform apply -auto-approve'
