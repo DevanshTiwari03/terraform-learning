@@ -21,6 +21,13 @@ pipeline{
                 sh 'terraform validate'
             }
         }
+
+        stage("Security Scan bt tfscan"){
+            steps{
+                sh 'tfsec .'
+            }
+        }
+
         stage('Terraform Plan'){
             steps{
                 sh 'terraform plan'
