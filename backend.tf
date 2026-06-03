@@ -3,4 +3,4 @@ terraform {
     bucket = "terraform-learning-state-497405"
     prefix = "ecommerce-project"
   }
-}
+} 
